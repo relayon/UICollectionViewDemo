@@ -20,6 +20,9 @@
 		54FED2B61D66BA740070E42C /* SimpleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FED2B41D66BA740070E42C /* SimpleCollectionViewCell.xib */; };
 		54FED2BF1D66D0A70070E42C /* SimpleSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED2BE1D66D0A70070E42C /* SimpleSectionHeader.m */; };
 		54FED2C21D66D0B70070E42C /* SimpleSectionFooter.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED2C11D66D0B70070E42C /* SimpleSectionFooter.m */; };
+		54FED2C71D670E820070E42C /* MoveCellCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED2C61D670E810070E42C /* MoveCellCollectionViewController.m */; };
+		54FED2CC1D6710760070E42C /* MoveCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED2CA1D6710760070E42C /* MoveCollectionViewCell.m */; };
+		54FED2CD1D6710760070E42C /* MoveCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54FED2CB1D6710760070E42C /* MoveCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +68,11 @@
 		54FED2BE1D66D0A70070E42C /* SimpleSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSectionHeader.m; sourceTree = "<group>"; };
 		54FED2C01D66D0B70070E42C /* SimpleSectionFooter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleSectionFooter.h; sourceTree = "<group>"; };
 		54FED2C11D66D0B70070E42C /* SimpleSectionFooter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleSectionFooter.m; sourceTree = "<group>"; };
+		54FED2C51D670E810070E42C /* MoveCellCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCellCollectionViewController.h; sourceTree = "<group>"; };
+		54FED2C61D670E810070E42C /* MoveCellCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCellCollectionViewController.m; sourceTree = "<group>"; };
+		54FED2C91D6710760070E42C /* MoveCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoveCollectionViewCell.h; sourceTree = "<group>"; };
+		54FED2CA1D6710760070E42C /* MoveCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoveCollectionViewCell.m; sourceTree = "<group>"; };
+		54FED2CB1D6710760070E42C /* MoveCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MoveCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 		54FED2761D66B29B0070E42C /* UICollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				54FED2C31D66F6500070E42C /* 可拖动Cell */,
 				54FED2AD1D66B98F0070E42C /* 基本用法 */,
 				54FED27A1D66B29B0070E42C /* AppDelegate.h */,
 				54FED27B1D66B29B0070E42C /* AppDelegate.m */,
@@ -177,6 +186,34 @@
 				54FED2C11D66D0B70070E42C /* SimpleSectionFooter.m */,
 			);
 			path = "自定义Cell";
+			sourceTree = "<group>";
+		};
+		54FED2C31D66F6500070E42C /* 可拖动Cell */ = {
+			isa = PBXGroup;
+			children = (
+				54FED2C81D6710670070E42C /* Cells */,
+				54FED2C41D66F6770070E42C /* UICollectionViewController */,
+			);
+			path = "可拖动Cell";
+			sourceTree = "<group>";
+		};
+		54FED2C41D66F6770070E42C /* UICollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				54FED2C51D670E810070E42C /* MoveCellCollectionViewController.h */,
+				54FED2C61D670E810070E42C /* MoveCellCollectionViewController.m */,
+			);
+			path = UICollectionViewController;
+			sourceTree = "<group>";
+		};
+		54FED2C81D6710670070E42C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				54FED2C91D6710760070E42C /* MoveCollectionViewCell.h */,
+				54FED2CA1D6710760070E42C /* MoveCollectionViewCell.m */,
+				54FED2CB1D6710760070E42C /* MoveCollectionViewCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,6 +323,7 @@
 				54FED2871D66B29C0070E42C /* Assets.xcassets in Resources */,
 				54FED2B61D66BA740070E42C /* SimpleCollectionViewCell.xib in Resources */,
 				54FED2851D66B29B0070E42C /* Main.storyboard in Resources */,
+				54FED2CD1D6710760070E42C /* MoveCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,9 +351,11 @@
 				54FED2C21D66D0B70070E42C /* SimpleSectionFooter.m in Sources */,
 				54FED27C1D66B29B0070E42C /* AppDelegate.m in Sources */,
 				54FED27F1D66B29B0070E42C /* MasterViewController.m in Sources */,
+				54FED2C71D670E820070E42C /* MoveCellCollectionViewController.m in Sources */,
 				54FED2BF1D66D0A70070E42C /* SimpleSectionHeader.m in Sources */,
 				54FED2B51D66BA740070E42C /* SimpleCollectionViewCell.m in Sources */,
 				54FED2791D66B29B0070E42C /* main.m in Sources */,
+				54FED2CC1D6710760070E42C /* MoveCollectionViewCell.m in Sources */,
 				54FED2B01D66B98F0070E42C /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

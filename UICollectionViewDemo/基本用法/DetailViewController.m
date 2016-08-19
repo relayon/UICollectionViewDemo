@@ -58,7 +58,6 @@
 // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     UICollectionViewCell* cell = nil;
-    
     // 使用自定义Cell，也可以在StoryBoard中添加
     // 自定义的Cell耦合性较低，便于复用
     NSString* cellName = NSStringFromClass([SimpleCollectionViewCell class]);

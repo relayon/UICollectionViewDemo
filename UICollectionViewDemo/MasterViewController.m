@@ -9,6 +9,8 @@
 #import "MasterViewController.h"
 
 #define K_SIMPLE_USAGE      @"基本用法"
+#define K_MOVE_CONTROLLER   @"可拖动Cell（UICollectionViewController）"
+#define K_MOVE_VIEW         @"可拖动Cell（UICollectionView）"
 
 @interface MasterViewController ()
 
@@ -23,7 +25,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.mData = [NSMutableArray array];
     
-    NSArray* items = @[K_SIMPLE_USAGE];
+    NSArray* items = @[K_SIMPLE_USAGE, K_MOVE_CONTROLLER, K_MOVE_VIEW];
     [self.mData addObjectsFromArray:items];
 }
 
@@ -71,6 +73,8 @@
         UIViewController *next = [[self storyboard] instantiateViewControllerWithIdentifier:@"DetailViewController"];
         next.title = title;
         [self.navigationController pushViewController:next animated:YES];
+    } else if ([title isEqualToString:K_MOVE_CONTROLLER]) {
+        [self performSegueWithIdentifier:@"K_MOVE_CONTROLLER" sender:self];
     }
 }
 

@@ -75,6 +75,8 @@
         [self.navigationController pushViewController:next animated:YES];
     } else if ([title isEqualToString:K_MOVE_CONTROLLER]) {
         [self performSegueWithIdentifier:@"K_MOVE_CONTROLLER" sender:self];
+    } else if ([title isEqualToString:K_MOVE_VIEW]) {
+        [self performSegueWithIdentifier:@"K_MOVE_VIEW" sender:self];
     }
 }
 

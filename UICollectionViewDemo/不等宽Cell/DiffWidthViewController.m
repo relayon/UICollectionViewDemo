@@ -55,7 +55,7 @@
     // 布局
     DiffWidthLayout* layout = [DiffWidthLayout new];
     self.diffLayout = layout;
-    layout.cellAlign = CellAlign_Left;
+//    layout.cellAlign = CellAlign_Left;
     self.collectionView.collectionViewLayout = layout;
 }
 

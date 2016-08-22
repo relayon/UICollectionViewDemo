@@ -26,6 +26,7 @@
     
     
     if (self.cellAlign == CellAlign_Left) {
+        attributes = [attributes mutableCopy];
         //第0个cell没有上一个cell，所以从1开始
         for(int i = 1; i < [attributes count]; ++i) {
             //这里 UICollectionViewLayoutAttributes 的排列总是按照 indexPath的顺序来的。

@@ -109,7 +109,7 @@
             </objects>
             <point key="canvasLocation" x="-226" y="28"/>
         </scene>
-        <!--Move Cell View Controller-->
+        <!--可拖动Cell（UICollectionView）-->
         <scene sceneID="8Dm-Kf-qgG">
             <objects>
                 <viewController id="Bs5-RJ-Jaa" customClass="MoveCellViewController" sceneMemberID="viewController">
@@ -144,6 +144,7 @@
                             <constraint firstItem="84c-0j-4hy" firstAttribute="top" secondItem="RWq-jQ-4fU" secondAttribute="top" id="xKT-UU-V3y"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="可拖动Cell（UICollectionView）" id="osc-m6-9Xp"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>

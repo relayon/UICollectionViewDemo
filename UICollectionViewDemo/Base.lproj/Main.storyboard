@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hL2-xa-ilc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="-365"/>
+            <point key="canvasLocation" x="878" y="-860"/>
         </scene>
         <!--Master-->
         <scene sceneID="smW-Zh-WAh">
@@ -194,6 +194,7 @@
                         <segue destination="3Te-K2-58Q" kind="show" identifier="K_MOVE_CONTROLLER" id="fdh-Gb-iDs"/>
                         <segue destination="Bs5-RJ-Jaa" kind="show" identifier="K_MOVE_VIEW" id="kms-uW-Vs6"/>
                         <segue destination="gu4-D7-HUr" kind="show" identifier="K_SEPARATOR_LINE" id="z3O-RZ-zfG"/>
+                        <segue destination="xHT-Zx-uMd" kind="show" identifier="K_DIFF_WIDTH" id="Ssu-uX-Jm5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
@@ -246,6 +247,52 @@
             </objects>
             <point key="canvasLocation" x="430" y="72"/>
         </scene>
+        <!--不等宽-->
+        <scene sceneID="g9z-70-sZo">
+            <objects>
+                <viewController id="xHT-Zx-uMd" customClass="DiffWidthViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jdj-HY-6WS"/>
+                        <viewControllerLayoutGuide type="bottom" id="kdJ-DO-WDM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sTV-nu-MQw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="BxF-qm-2nY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6Cg-rE-Upb">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="xHT-Zx-uMd" id="X2d-19-VqF"/>
+                                    <outlet property="delegate" destination="xHT-Zx-uMd" id="Dip-AL-uIE"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kdJ-DO-WDM" firstAttribute="top" secondItem="BxF-qm-2nY" secondAttribute="bottom" id="3zo-z6-ZBM"/>
+                            <constraint firstItem="BxF-qm-2nY" firstAttribute="top" secondItem="sTV-nu-MQw" secondAttribute="top" id="JFU-80-E8q"/>
+                            <constraint firstItem="BxF-qm-2nY" firstAttribute="leading" secondItem="sTV-nu-MQw" secondAttribute="leading" id="RDb-1x-WSX"/>
+                            <constraint firstAttribute="trailing" secondItem="BxF-qm-2nY" secondAttribute="trailing" id="vXN-Jf-tdz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="不等宽" id="ZzZ-vB-VmW"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="BxF-qm-2nY" id="OhM-2V-jVf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aij-cT-2B0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="845" y="-391"/>
+        </scene>
         <!--可拖动Cell-->
         <scene sceneID="Eeo-QE-1ty">
             <objects>
@@ -271,7 +318,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbr-If-FFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="849" y="-968"/>
+            <point key="canvasLocation" x="796" y="-1122"/>
         </scene>
     </scenes>
 </document>

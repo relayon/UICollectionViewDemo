@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		54244E7A1D6A97E100594CF8 /* SeparatorLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E781D6A97E100594CF8 /* SeparatorLine.m */; };
+		54244E7B1D6A97E100594CF8 /* SeparatorLine.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54244E791D6A97E100594CF8 /* SeparatorLine.xib */; };
+		54244E7F1D6A985C00594CF8 /* SeparatorLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E7E1D6A985C00594CF8 /* SeparatorLayout.m */; };
+		54244E821D6A988200594CF8 /* SeparatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E811D6A988200594CF8 /* SeparatorViewController.m */; };
 		54FED2791D66B29B0070E42C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED2781D66B29B0070E42C /* main.m */; };
 		54FED27C1D66B29B0070E42C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED27B1D66B29B0070E42C /* AppDelegate.m */; };
 		54FED27F1D66B29B0070E42C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED27E1D66B29B0070E42C /* MasterViewController.m */; };
@@ -44,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		54244E771D6A97E100594CF8 /* SeparatorLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatorLine.h; sourceTree = "<group>"; };
+		54244E781D6A97E100594CF8 /* SeparatorLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorLine.m; sourceTree = "<group>"; };
+		54244E791D6A97E100594CF8 /* SeparatorLine.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SeparatorLine.xib; sourceTree = "<group>"; };
+		54244E7D1D6A985C00594CF8 /* SeparatorLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatorLayout.h; sourceTree = "<group>"; };
+		54244E7E1D6A985C00594CF8 /* SeparatorLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorLayout.m; sourceTree = "<group>"; };
+		54244E801D6A988200594CF8 /* SeparatorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SeparatorViewController.h; sourceTree = "<group>"; };
+		54244E811D6A988200594CF8 /* SeparatorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SeparatorViewController.m; sourceTree = "<group>"; };
 		54FED2741D66B29B0070E42C /* UICollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FED2781D66B29B0070E42C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54FED27A1D66B29B0070E42C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -103,6 +114,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		54244E751D6A97B500594CF8 /* 分割线 */ = {
+			isa = PBXGroup;
+			children = (
+				54244E7C1D6A982100594CF8 /* Layout */,
+				54244E761D6A97CB00594CF8 /* Separator */,
+				54244E801D6A988200594CF8 /* SeparatorViewController.h */,
+				54244E811D6A988200594CF8 /* SeparatorViewController.m */,
+			);
+			path = "分割线";
+			sourceTree = "<group>";
+		};
+		54244E761D6A97CB00594CF8 /* Separator */ = {
+			isa = PBXGroup;
+			children = (
+				54244E771D6A97E100594CF8 /* SeparatorLine.h */,
+				54244E781D6A97E100594CF8 /* SeparatorLine.m */,
+				54244E791D6A97E100594CF8 /* SeparatorLine.xib */,
+			);
+			path = Separator;
+			sourceTree = "<group>";
+		};
+		54244E7C1D6A982100594CF8 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				54244E7D1D6A985C00594CF8 /* SeparatorLayout.h */,
+				54244E7E1D6A985C00594CF8 /* SeparatorLayout.m */,
+			);
+			path = Layout;
+			sourceTree = "<group>";
+		};
 		54FED26B1D66B29B0070E42C = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +167,7 @@
 		54FED2761D66B29B0070E42C /* UICollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				54244E751D6A97B500594CF8 /* 分割线 */,
 				54FED2C31D66F6500070E42C /* 可拖动Cell */,
 				54FED2AD1D66B98F0070E42C /* 基本用法 */,
 				54FED27A1D66B29B0070E42C /* AppDelegate.h */,
@@ -337,6 +379,7 @@
 				54FED2B61D66BA740070E42C /* SimpleCollectionViewCell.xib in Resources */,
 				54FED2851D66B29B0070E42C /* Main.storyboard in Resources */,
 				54FED2CD1D6710760070E42C /* MoveCollectionViewCell.xib in Resources */,
+				54244E7B1D6A97E100594CF8 /* SeparatorLine.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +406,9 @@
 			files = (
 				54FED2C21D66D0B70070E42C /* SimpleSectionFooter.m in Sources */,
 				FD5958811D67524500CF2E4B /* MoveCellViewController.m in Sources */,
+				54244E821D6A988200594CF8 /* SeparatorViewController.m in Sources */,
+				54244E7A1D6A97E100594CF8 /* SeparatorLine.m in Sources */,
+				54244E7F1D6A985C00594CF8 /* SeparatorLayout.m in Sources */,
 				54FED27C1D66B29B0070E42C /* AppDelegate.m in Sources */,
 				54FED27F1D66B29B0070E42C /* MasterViewController.m in Sources */,
 				54FED2C71D670E820070E42C /* MoveCellCollectionViewController.m in Sources */,

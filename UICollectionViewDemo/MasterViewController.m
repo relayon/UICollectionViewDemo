@@ -11,6 +11,7 @@
 #define K_SIMPLE_USAGE      @"基本用法"
 #define K_MOVE_CONTROLLER   @"可拖动Cell（UICollectionViewController）"
 #define K_MOVE_VIEW         @"可拖动Cell（UICollectionView）"
+#define K_SEPARATOR_LINE    @"分割线"
 
 @interface MasterViewController ()
 
@@ -25,7 +26,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.mData = [NSMutableArray array];
     
-    NSArray* items = @[K_SIMPLE_USAGE, K_MOVE_CONTROLLER, K_MOVE_VIEW];
+    NSArray* items = @[K_SIMPLE_USAGE, K_MOVE_CONTROLLER, K_MOVE_VIEW, K_SEPARATOR_LINE];
     [self.mData addObjectsFromArray:items];
 }
 
@@ -77,6 +78,8 @@
         [self performSegueWithIdentifier:@"K_MOVE_CONTROLLER" sender:self];
     } else if ([title isEqualToString:K_MOVE_VIEW]) {
         [self performSegueWithIdentifier:@"K_MOVE_VIEW" sender:self];
+    } else if ([title isEqualToString:K_SEPARATOR_LINE]) {
+        [self performSegueWithIdentifier:@"K_SEPARATOR_LINE" sender:self];
     }
 }
 

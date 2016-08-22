@@ -13,6 +13,7 @@
 #define K_MOVE_VIEW         @"可拖动Cell（UICollectionView）"
 #define K_SEPARATOR_LINE    @"分割线"
 #define K_DIFF_WIDTH        @"不等宽Cell"
+#define K_WATERFALL         @"瀑布流"
 
 @interface MasterViewController ()
 
@@ -27,7 +28,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.mData = [NSMutableArray array];
     
-    NSArray* items = @[K_SIMPLE_USAGE, K_MOVE_CONTROLLER, K_MOVE_VIEW, K_SEPARATOR_LINE, K_DIFF_WIDTH];
+    NSArray* items = @[K_SIMPLE_USAGE, K_MOVE_CONTROLLER, K_MOVE_VIEW, K_SEPARATOR_LINE, K_DIFF_WIDTH, K_WATERFALL];
     [self.mData addObjectsFromArray:items];
 }
 
@@ -83,6 +84,8 @@
         [self performSegueWithIdentifier:@"K_SEPARATOR_LINE" sender:self];
     } else if ([title isEqualToString:K_DIFF_WIDTH]) {
         [self performSegueWithIdentifier:@"K_DIFF_WIDTH" sender:self];
+    } else if ([title isEqualToString:K_WATERFALL]) {
+        [self performSegueWithIdentifier:@"K_WATERFALL" sender:self];
     }
 }
 

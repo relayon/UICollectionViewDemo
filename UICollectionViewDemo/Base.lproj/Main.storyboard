@@ -196,6 +196,7 @@
                         <segue destination="Bs5-RJ-Jaa" kind="show" identifier="K_MOVE_VIEW" id="kms-uW-Vs6"/>
                         <segue destination="gu4-D7-HUr" kind="show" identifier="K_SEPARATOR_LINE" id="z3O-RZ-zfG"/>
                         <segue destination="xHT-Zx-uMd" kind="show" identifier="K_DIFF_WIDTH" id="Ssu-uX-Jm5"/>
+                        <segue destination="Q1b-UF-hh1" kind="show" identifier="K_WATERFALL" id="nGN-wo-GwE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
@@ -246,7 +247,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIr-Mx-iVC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="72"/>
+            <point key="canvasLocation" x="362" y="63"/>
         </scene>
         <!--Diff Width View Controller-->
         <scene sceneID="g9z-70-sZo">
@@ -306,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aij-cT-2B0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="845" y="-391"/>
+            <point key="canvasLocation" x="865" y="-427"/>
         </scene>
         <!--可拖动Cell-->
         <scene sceneID="Eeo-QE-1ty">
@@ -334,6 +335,52 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bbr-If-FFH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="796" y="-1122"/>
+        </scene>
+        <!--瀑布流-->
+        <scene sceneID="V5K-G6-DQd">
+            <objects>
+                <viewController storyboardIdentifier="WaterfullViewController" id="Q1b-UF-hh1" customClass="WaterfullViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AUG-KU-fFW"/>
+                        <viewControllerLayoutGuide type="bottom" id="e1w-aK-XWv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OKM-6c-qRG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="H2k-dE-rnZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fYf-Xn-ZJq">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Q1b-UF-hh1" id="E95-2h-NJM"/>
+                                    <outlet property="delegate" destination="Q1b-UF-hh1" id="2ga-Ob-Gtc"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H2k-dE-rnZ" firstAttribute="top" secondItem="OKM-6c-qRG" secondAttribute="top" id="Vk5-GL-lKX"/>
+                            <constraint firstAttribute="trailing" secondItem="H2k-dE-rnZ" secondAttribute="trailing" id="pcV-ml-RI0"/>
+                            <constraint firstItem="H2k-dE-rnZ" firstAttribute="leading" secondItem="OKM-6c-qRG" secondAttribute="leading" id="tGg-Ln-KHH"/>
+                            <constraint firstItem="e1w-aK-XWv" firstAttribute="top" secondItem="H2k-dE-rnZ" secondAttribute="bottom" id="w53-Rz-WXV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="瀑布流" id="uJ6-tj-shf"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="H2k-dE-rnZ" id="zp2-qB-0jn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="to7-VS-EWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="-204"/>
         </scene>
     </scenes>
 </document>

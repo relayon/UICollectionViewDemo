@@ -13,6 +13,8 @@
 		54244E821D6A988200594CF8 /* SeparatorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E811D6A988200594CF8 /* SeparatorViewController.m */; };
 		54244E871D6AA40C00594CF8 /* DiffWidthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E861D6AA40C00594CF8 /* DiffWidthViewController.m */; };
 		54244E8A1D6AA4BD00594CF8 /* DiffWidthLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E891D6AA4BD00594CF8 /* DiffWidthLayout.m */; };
+		54244E8E1D6ACA6E00594CF8 /* WaterfullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E8D1D6ACA6E00594CF8 /* WaterfullViewController.m */; };
+		54244E911D6ACA8500594CF8 /* WaterfullLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E901D6ACA8500594CF8 /* WaterfullLayout.m */; };
 		54FED2791D66B29B0070E42C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED2781D66B29B0070E42C /* main.m */; };
 		54FED27C1D66B29B0070E42C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED27B1D66B29B0070E42C /* AppDelegate.m */; };
 		54FED27F1D66B29B0070E42C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED27E1D66B29B0070E42C /* MasterViewController.m */; };
@@ -61,6 +63,10 @@
 		54244E861D6AA40C00594CF8 /* DiffWidthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiffWidthViewController.m; sourceTree = "<group>"; };
 		54244E881D6AA4BD00594CF8 /* DiffWidthLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiffWidthLayout.h; sourceTree = "<group>"; };
 		54244E891D6AA4BD00594CF8 /* DiffWidthLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiffWidthLayout.m; sourceTree = "<group>"; };
+		54244E8C1D6ACA6E00594CF8 /* WaterfullViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfullViewController.h; sourceTree = "<group>"; };
+		54244E8D1D6ACA6E00594CF8 /* WaterfullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfullViewController.m; sourceTree = "<group>"; };
+		54244E8F1D6ACA8500594CF8 /* WaterfullLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfullLayout.h; sourceTree = "<group>"; };
+		54244E901D6ACA8500594CF8 /* WaterfullLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfullLayout.m; sourceTree = "<group>"; };
 		54FED2741D66B29B0070E42C /* UICollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FED2781D66B29B0070E42C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54FED27A1D66B29B0070E42C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -161,6 +167,17 @@
 			path = "不等宽Cell";
 			sourceTree = "<group>";
 		};
+		54244E8B1D6ACA5700594CF8 /* 瀑布流 */ = {
+			isa = PBXGroup;
+			children = (
+				54244E8C1D6ACA6E00594CF8 /* WaterfullViewController.h */,
+				54244E8D1D6ACA6E00594CF8 /* WaterfullViewController.m */,
+				54244E8F1D6ACA8500594CF8 /* WaterfullLayout.h */,
+				54244E901D6ACA8500594CF8 /* WaterfullLayout.m */,
+			);
+			path = "瀑布流";
+			sourceTree = "<group>";
+		};
 		54FED26B1D66B29B0070E42C = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +201,7 @@
 		54FED2761D66B29B0070E42C /* UICollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				54244E8B1D6ACA5700594CF8 /* 瀑布流 */,
 				54244E831D6AA3AB00594CF8 /* 不等宽Cell */,
 				54244E751D6A97B500594CF8 /* 分割线 */,
 				54FED2C31D66F6500070E42C /* 可拖动Cell */,
@@ -422,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54244E911D6ACA8500594CF8 /* WaterfullLayout.m in Sources */,
 				54FED2C21D66D0B70070E42C /* SimpleSectionFooter.m in Sources */,
 				FD5958811D67524500CF2E4B /* MoveCellViewController.m in Sources */,
 				54244E821D6A988200594CF8 /* SeparatorViewController.m in Sources */,
@@ -431,6 +450,7 @@
 				54244E8A1D6AA4BD00594CF8 /* DiffWidthLayout.m in Sources */,
 				54244E871D6AA40C00594CF8 /* DiffWidthViewController.m in Sources */,
 				54FED27F1D66B29B0070E42C /* MasterViewController.m in Sources */,
+				54244E8E1D6ACA6E00594CF8 /* WaterfullViewController.m in Sources */,
 				54FED2C71D670E820070E42C /* MoveCellCollectionViewController.m in Sources */,
 				54FED2BF1D66D0A70070E42C /* SimpleSectionHeader.m in Sources */,
 				54FED2B51D66BA740070E42C /* SimpleCollectionViewCell.m in Sources */,

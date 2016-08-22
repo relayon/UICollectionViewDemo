@@ -14,6 +14,9 @@
     int width[100];
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+- (IBAction)onValueChanged:(UISegmentedControl *)sender;
+
+@property (weak, nonatomic) DiffWidthLayout* diffLayout;
 
 @end
 
@@ -51,6 +54,8 @@
     
     // 布局
     DiffWidthLayout* layout = [DiffWidthLayout new];
+    self.diffLayout = layout;
+    layout.cellAlign = CellAlign_Left;
     self.collectionView.collectionViewLayout = layout;
 }
 
@@ -76,4 +81,14 @@
     return cell;
 }
 
+- (IBAction)onValueChanged:(UISegmentedControl *)sender {
+    if (sender.selectedSegmentIndex == 0) {
+        self.diffLayout.cellAlign = CellAlign_Default;
+    } else if (sender.selectedSegmentIndex == 1) {
+        self.diffLayout.cellAlign = CellAlign_Left;
+    } else if (sender.selectedSegmentIndex == 2) {
+        self.diffLayout.cellAlign = CellAlign_Right;
+    }
+    [self.collectionView reloadData];
+}
 @end

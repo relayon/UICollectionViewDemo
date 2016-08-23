@@ -14,6 +14,7 @@
 #define K_SEPARATOR_LINE    @"分割线"
 #define K_DIFF_WIDTH        @"不等宽Cell"
 #define K_WATERFALL         @"瀑布流"
+#define K_CALENDAR          @"日历控件"
 
 @interface MasterViewController ()
 
@@ -28,7 +29,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.mData = [NSMutableArray array];
     
-    NSArray* items = @[K_SIMPLE_USAGE, K_MOVE_CONTROLLER, K_MOVE_VIEW, K_SEPARATOR_LINE, K_DIFF_WIDTH, K_WATERFALL];
+    NSArray* items = @[K_SIMPLE_USAGE, K_MOVE_CONTROLLER, K_MOVE_VIEW, K_SEPARATOR_LINE, K_DIFF_WIDTH, K_WATERFALL, K_CALENDAR];
     [self.mData addObjectsFromArray:items];
 }
 
@@ -86,6 +87,8 @@
         [self performSegueWithIdentifier:@"K_DIFF_WIDTH" sender:self];
     } else if ([title isEqualToString:K_WATERFALL]) {
         [self performSegueWithIdentifier:@"K_WATERFALL" sender:self];
+    } else if ([title isEqualToString:K_CALENDAR]) {
+        [self performSegueWithIdentifier:@"K_CALENDAR" sender:self];
     }
 }
 

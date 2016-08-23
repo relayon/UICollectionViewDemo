@@ -15,6 +15,7 @@
 		54244E8A1D6AA4BD00594CF8 /* DiffWidthLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E891D6AA4BD00594CF8 /* DiffWidthLayout.m */; };
 		54244E8E1D6ACA6E00594CF8 /* WaterfullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E8D1D6ACA6E00594CF8 /* WaterfullViewController.m */; };
 		54244E911D6ACA8500594CF8 /* WaterfullLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E901D6ACA8500594CF8 /* WaterfullLayout.m */; };
+		54244E981D6C1A3200594CF8 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E971D6C1A3200594CF8 /* CalendarViewController.m */; };
 		54FED2791D66B29B0070E42C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED2781D66B29B0070E42C /* main.m */; };
 		54FED27C1D66B29B0070E42C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED27B1D66B29B0070E42C /* AppDelegate.m */; };
 		54FED27F1D66B29B0070E42C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED27E1D66B29B0070E42C /* MasterViewController.m */; };
@@ -67,6 +68,8 @@
 		54244E8D1D6ACA6E00594CF8 /* WaterfullViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfullViewController.m; sourceTree = "<group>"; };
 		54244E8F1D6ACA8500594CF8 /* WaterfullLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterfullLayout.h; sourceTree = "<group>"; };
 		54244E901D6ACA8500594CF8 /* WaterfullLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfullLayout.m; sourceTree = "<group>"; };
+		54244E961D6C1A3200594CF8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		54244E971D6C1A3200594CF8 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		54FED2741D66B29B0070E42C /* UICollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FED2781D66B29B0070E42C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54FED27A1D66B29B0070E42C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -178,6 +181,15 @@
 			path = "瀑布流";
 			sourceTree = "<group>";
 		};
+		54244E921D6C197300594CF8 /* 日历控件 */ = {
+			isa = PBXGroup;
+			children = (
+				54244E961D6C1A3200594CF8 /* CalendarViewController.h */,
+				54244E971D6C1A3200594CF8 /* CalendarViewController.m */,
+			);
+			path = "日历控件";
+			sourceTree = "<group>";
+		};
 		54FED26B1D66B29B0070E42C = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +213,7 @@
 		54FED2761D66B29B0070E42C /* UICollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				54244E921D6C197300594CF8 /* 日历控件 */,
 				54244E8B1D6ACA5700594CF8 /* 瀑布流 */,
 				54244E831D6AA3AB00594CF8 /* 不等宽Cell */,
 				54244E751D6A97B500594CF8 /* 分割线 */,
@@ -450,6 +463,7 @@
 				54244E8A1D6AA4BD00594CF8 /* DiffWidthLayout.m in Sources */,
 				54244E871D6AA40C00594CF8 /* DiffWidthViewController.m in Sources */,
 				54FED27F1D66B29B0070E42C /* MasterViewController.m in Sources */,
+				54244E981D6C1A3200594CF8 /* CalendarViewController.m in Sources */,
 				54244E8E1D6ACA6E00594CF8 /* WaterfullViewController.m in Sources */,
 				54FED2C71D670E820070E42C /* MoveCellCollectionViewController.m in Sources */,
 				54FED2BF1D66D0A70070E42C /* SimpleSectionHeader.m in Sources */,

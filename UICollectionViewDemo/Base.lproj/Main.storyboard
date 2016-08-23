@@ -197,6 +197,7 @@
                         <segue destination="gu4-D7-HUr" kind="show" identifier="K_SEPARATOR_LINE" id="z3O-RZ-zfG"/>
                         <segue destination="xHT-Zx-uMd" kind="show" identifier="K_DIFF_WIDTH" id="Ssu-uX-Jm5"/>
                         <segue destination="Q1b-UF-hh1" kind="show" identifier="K_WATERFALL" id="nGN-wo-GwE"/>
+                        <segue destination="PAy-PO-ByH" kind="show" identifier="K_CALENDAR" id="wZi-jS-IXl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
@@ -307,7 +308,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aij-cT-2B0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865" y="-427"/>
+            <point key="canvasLocation" x="1196" y="-221"/>
         </scene>
         <!--可拖动Cell-->
         <scene sceneID="Eeo-QE-1ty">
@@ -380,7 +381,53 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to7-VS-EWZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="841" y="-204"/>
+            <point key="canvasLocation" x="1353" y="-393"/>
+        </scene>
+        <!--日历控件-->
+        <scene sceneID="iR4-ql-r8N">
+            <objects>
+                <viewController storyboardIdentifier="CalendarViewController" id="PAy-PO-ByH" customClass="CalendarViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LdX-bt-uTU"/>
+                        <viewControllerLayoutGuide type="bottom" id="ss2-A9-H3t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RzQ-Ep-gP7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="sns-7D-v32">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="djp-I0-mCF">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="PAy-PO-ByH" id="VcA-UQ-oi8"/>
+                                    <outlet property="delegate" destination="PAy-PO-ByH" id="A9P-XC-tqI"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sns-7D-v32" firstAttribute="top" secondItem="RzQ-Ep-gP7" secondAttribute="top" id="09X-JG-94b"/>
+                            <constraint firstAttribute="trailing" secondItem="sns-7D-v32" secondAttribute="trailing" id="6gs-al-wOb"/>
+                            <constraint firstItem="sns-7D-v32" firstAttribute="leading" secondItem="RzQ-Ep-gP7" secondAttribute="leading" id="Vh0-8p-g53"/>
+                            <constraint firstItem="ss2-A9-H3t" firstAttribute="top" secondItem="sns-7D-v32" secondAttribute="bottom" id="v2S-jQ-a1H"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="日历控件" id="9Q8-9h-jsR"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="sns-7D-v32" id="5XS-Su-8UW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gMl-kt-xV0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="812" y="34"/>
         </scene>
     </scenes>
 </document>

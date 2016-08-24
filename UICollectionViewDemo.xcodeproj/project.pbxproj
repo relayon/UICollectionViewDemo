@@ -16,6 +16,9 @@
 		54244E8E1D6ACA6E00594CF8 /* WaterfullViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E8D1D6ACA6E00594CF8 /* WaterfullViewController.m */; };
 		54244E911D6ACA8500594CF8 /* WaterfullLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E901D6ACA8500594CF8 /* WaterfullLayout.m */; };
 		54244E981D6C1A3200594CF8 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244E971D6C1A3200594CF8 /* CalendarViewController.m */; };
+		54244EE31D6D4ADD00594CF8 /* CircleCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244EE21D6D4ADD00594CF8 /* CircleCollectionViewController.m */; };
+		54244EE61D6D4B9500594CF8 /* CircleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244EE51D6D4B9500594CF8 /* CircleCell.m */; };
+		54244EE91D6D501300594CF8 /* CircleLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 54244EE81D6D501300594CF8 /* CircleLayout.m */; };
 		54FED2791D66B29B0070E42C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED2781D66B29B0070E42C /* main.m */; };
 		54FED27C1D66B29B0070E42C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED27B1D66B29B0070E42C /* AppDelegate.m */; };
 		54FED27F1D66B29B0070E42C /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 54FED27E1D66B29B0070E42C /* MasterViewController.m */; };
@@ -70,6 +73,12 @@
 		54244E901D6ACA8500594CF8 /* WaterfullLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterfullLayout.m; sourceTree = "<group>"; };
 		54244E961D6C1A3200594CF8 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		54244E971D6C1A3200594CF8 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		54244EE11D6D4ADD00594CF8 /* CircleCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCollectionViewController.h; sourceTree = "<group>"; };
+		54244EE21D6D4ADD00594CF8 /* CircleCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCollectionViewController.m; sourceTree = "<group>"; };
+		54244EE41D6D4B9500594CF8 /* CircleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleCell.h; sourceTree = "<group>"; };
+		54244EE51D6D4B9500594CF8 /* CircleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleCell.m; sourceTree = "<group>"; };
+		54244EE71D6D501300594CF8 /* CircleLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleLayout.h; sourceTree = "<group>"; };
+		54244EE81D6D501300594CF8 /* CircleLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleLayout.m; sourceTree = "<group>"; };
 		54FED2741D66B29B0070E42C /* UICollectionViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UICollectionViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54FED2781D66B29B0070E42C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		54FED27A1D66B29B0070E42C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +199,19 @@
 			path = "日历控件";
 			sourceTree = "<group>";
 		};
+		54244EE01D6D4AC200594CF8 /* 圆形布局 */ = {
+			isa = PBXGroup;
+			children = (
+				54244EE11D6D4ADD00594CF8 /* CircleCollectionViewController.h */,
+				54244EE21D6D4ADD00594CF8 /* CircleCollectionViewController.m */,
+				54244EE41D6D4B9500594CF8 /* CircleCell.h */,
+				54244EE51D6D4B9500594CF8 /* CircleCell.m */,
+				54244EE71D6D501300594CF8 /* CircleLayout.h */,
+				54244EE81D6D501300594CF8 /* CircleLayout.m */,
+			);
+			path = "圆形布局";
+			sourceTree = "<group>";
+		};
 		54FED26B1D66B29B0070E42C = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +235,7 @@
 		54FED2761D66B29B0070E42C /* UICollectionViewDemo */ = {
 			isa = PBXGroup;
 			children = (
+				54244EE01D6D4AC200594CF8 /* 圆形布局 */,
 				54244E921D6C197300594CF8 /* 日历控件 */,
 				54244E8B1D6ACA5700594CF8 /* 瀑布流 */,
 				54244E831D6AA3AB00594CF8 /* 不等宽Cell */,
@@ -455,8 +478,10 @@
 			files = (
 				54244E911D6ACA8500594CF8 /* WaterfullLayout.m in Sources */,
 				54FED2C21D66D0B70070E42C /* SimpleSectionFooter.m in Sources */,
+				54244EE31D6D4ADD00594CF8 /* CircleCollectionViewController.m in Sources */,
 				FD5958811D67524500CF2E4B /* MoveCellViewController.m in Sources */,
 				54244E821D6A988200594CF8 /* SeparatorViewController.m in Sources */,
+				54244EE61D6D4B9500594CF8 /* CircleCell.m in Sources */,
 				54244E7A1D6A97E100594CF8 /* SeparatorLine.m in Sources */,
 				54244E7F1D6A985C00594CF8 /* SeparatorLayout.m in Sources */,
 				54FED27C1D66B29B0070E42C /* AppDelegate.m in Sources */,
@@ -465,6 +490,7 @@
 				54FED27F1D66B29B0070E42C /* MasterViewController.m in Sources */,
 				54244E981D6C1A3200594CF8 /* CalendarViewController.m in Sources */,
 				54244E8E1D6ACA6E00594CF8 /* WaterfullViewController.m in Sources */,
+				54244EE91D6D501300594CF8 /* CircleLayout.m in Sources */,
 				54FED2C71D670E820070E42C /* MoveCellCollectionViewController.m in Sources */,
 				54FED2BF1D66D0A70070E42C /* SimpleSectionHeader.m in Sources */,
 				54FED2B51D66BA740070E42C /* SimpleCollectionViewCell.m in Sources */,

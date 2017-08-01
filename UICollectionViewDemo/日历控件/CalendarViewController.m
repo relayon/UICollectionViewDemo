@@ -9,7 +9,7 @@
 #import "CalendarViewController.h"
 #import "SimpleCollectionViewCell.h"
 
-@interface CalendarViewController () <UICollectionViewDataSource, UICollectionViewDelegate> {
+@interface CalendarViewController () <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout> {
     int weekPerMonth;
 }
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;

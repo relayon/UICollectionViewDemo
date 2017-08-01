@@ -11,4 +11,6 @@
 @interface SimpleCollectionViewCell : UICollectionViewCell
 @property (weak, nonatomic) IBOutlet UILabel *labelTitle;
 
+@property (assign, nonatomic) BOOL bSelected;
+
 @end

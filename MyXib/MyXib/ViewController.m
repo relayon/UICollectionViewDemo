@@ -19,22 +19,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    UIView *tView = [UIView new];
-    NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:tView
-                                                                       attribute:NSLayoutAttributeWidth
-                                                                       relatedBy:NSLayoutRelationEqual
-                                                                          toItem:nil
-                                                                       attribute:NSLayoutAttributeNotAnAttribute
-                                                                      multiplier:1.0
-                                                                        constant:100.0f];
-    [tView addConstraint:widthConstraint];
-    [NSLayoutConstraint constraintWithItem:tView
-                                 attribute:NSLayoutAttributeWidth
-                                 relatedBy:NSLayoutRelationEqual
-                                    toItem:nil
-                                 attribute:NSLayoutAttributeNotAnAttribute
-                                multiplier:1.0
-                                  constant:100.0f];
+//    UIView *tView = [UIView new];
+//    NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:tView
+//                                                                       attribute:NSLayoutAttributeWidth
+//                                                                       relatedBy:NSLayoutRelationEqual
+//                                                                          toItem:nil
+//                                                                       attribute:NSLayoutAttributeNotAnAttribute
+//                                                                      multiplier:1.0
+//                                                                        constant:100.0f];
+//    [tView addConstraint:widthConstraint];
+//    [NSLayoutConstraint constraintWithItem:tView
+//                                 attribute:NSLayoutAttributeWidth
+//                                 relatedBy:NSLayoutRelationEqual
+//                                    toItem:nil
+//                                 attribute:NSLayoutAttributeNotAnAttribute
+//                                multiplier:1.0
+//                                  constant:100.0f];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -55,8 +55,49 @@
     // 布局
     DiffWidthLayout* layout = [DiffWidthLayout new];
     self.diffLayout = layout;
-//    layout.cellAlign = CellAlign_Left;
+    layout.cellAlign = CellAlign_Left;
     self.collectionView.collectionViewLayout = layout;
+    
+//    [self.collectionView setTransform:CGAffineTransformMakeScale(-1, 1)];
+    
+//    self.collectionView.collectionViewLayout = [UICollectionViewFlowLayout new];
+//    CGSize sz = self.collectionView.collectionViewLayout.collectionViewContentSize;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
+    return 10;
+}
+
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
+    return 15;
+}
+
+#pragma mark -- delegate
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    NSLog(@"%s", __FUNCTION__);
+    SimpleCollectionViewCell* tCell = (SimpleCollectionViewCell*)[collectionView cellForItemAtIndexPath:indexPath];
+    tCell.bSelected = !tCell.bSelected;
+    
+    if (tCell.bSelected) {
+        tCell.backgroundColor = [UIColor blueColor];
+    } else {
+        tCell.backgroundColor = [UIColor lightGrayColor];
+    }
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+    //    cell.backgroundColor = [UIColor lightGrayColor];
+//    cell.backgroundColor = [UIColor colorWithRed:243.0/255.0 green:243.0/255.0 blue:248.0/255.0 alpha:1.0];
+    cell.backgroundColor = [cell.backgroundColor colorWithAlphaComponent:0.8];
+//    NSLog(@"------- didHighlightItemAtIndexPath");
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+    UICollectionViewCell * cell = (UICollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
+//    cell.backgroundColor = [UIColor whiteColor];
+    cell.backgroundColor = [cell.backgroundColor colorWithAlphaComponent:1];
+//    NSLog(@"------- didUnhighlightItemAtIndexPath");
 }
 
 #pragma mark -- UICollectionViewDataSource
@@ -66,7 +107,7 @@
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 100;
+    return 5;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -75,8 +116,17 @@
     // 自定义的Cell耦合性较低，便于复用
     NSString* cellName = NSStringFromClass([SimpleCollectionViewCell class]);
     SimpleCollectionViewCell* tCell = [collectionView dequeueReusableCellWithReuseIdentifier:cellName forIndexPath:indexPath];
+//    [tCell setTransform:CGAffineTransformMakeScale(-1, 1)];
     tCell.labelTitle.text = [NSString stringWithFormat:@"%d", width[indexPath.row]];
     cell = tCell;
+    tCell.layer.masksToBounds = YES;
+    tCell.layer.cornerRadius = 25;
+    
+    if (tCell.bSelected) {
+        tCell.backgroundColor = [UIColor blueColor];
+    } else {
+        tCell.backgroundColor = [UIColor lightGrayColor];
+    }
     
     return cell;
 }
